@@ -14,6 +14,9 @@
 		<module>auth-core</module>
 		<module>oauth</module>
 		<module>json-web-token</module>
+		<module>shiro</module>
+		<module>shiro-spring-boot</module>
+		<module>spring-security</module>
 	</modules>
  
 	<!-- 公共属性 -->
@@ -29,7 +32,9 @@
 		<maven.plugin.dependency.version>2.10</maven.plugin.dependency.version>
 		<maven.plugin.war.version>3.0</maven.plugin.war.version>
 		<auth.core.version>1.0.0</auth.core.version>
-		<jjwt.version>0.11.3-SNAPSHOT</jjwt.version>
+		<jjwt.version>0.9.1</jjwt.version>
+		<shiro.version>1.7.0</shiro.version>
+		<lombok.version>1.18.16</lombok.version>			
 	</properties>  
   
   
@@ -144,9 +149,21 @@
 			
 			<dependency>
 				<groupId>io.jsonwebtoken</groupId>
-				 <artifactId>jjwt-api</artifactId>
+				 <artifactId>jjwt</artifactId>
 				 <version>${jjwt.version}</version>
 			</dependency>
+
+			<dependency>
+				<groupId>org.apache.shiro</groupId>
+				<artifactId>shiro-core</artifactId>
+				<version>${shiro.version}</version>
+			</dependency>
+
+	        <dependency>
+	            <groupId>org.projectlombok</groupId>
+	            <artifactId>lombok</artifactId>
+	            <version>${lombok.version}</version>
+	        </dependency>
 			
 		</dependencies>
 	</dependencyManagement>

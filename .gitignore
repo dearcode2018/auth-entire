@@ -10,6 +10,10 @@
 .springBeans
 .sts4-cache
 
+node_modules
+
+*/node_modules/*
+
 ### IntelliJ IDEA ###
 .idea
 *.iws
@@ -26,5 +30,3 @@
 #/src/main/resources/mybatis-generator.xml
 # 忽略
 #.gitignore
-
-src/main/java/com/wehotel/uni/user/controller/TestController.java
