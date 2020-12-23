@@ -16,7 +16,8 @@
 		<module>json-web-token</module>
 		<module>shiro</module>
 		<module>shiro-spring-boot</module>
-		<module>spring-security</module>
+		<module>spring-security-oauth</module>
+		<module>spring-security-simple</module>		
 	</modules>
  
 	<!-- 公共属性 -->
