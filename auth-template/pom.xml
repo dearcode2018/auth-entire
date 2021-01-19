@@ -12,7 +12,7 @@
 	<properties>
 		<jdk.version>1.8</jdk.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.version>0.0.1</maven.version>
+		<maven.version>1.0.0</maven.version>
 		<maven.plugin.compiler.version>3.3</maven.plugin.compiler.version>
 		<maven.plugin.source.version>2.4</maven.plugin.source.version>
 		<maven.plugin.surefire.version>2.18.1</maven.plugin.surefire.version>
