@@ -35,14 +35,15 @@
 		<auth.core.version>1.0.0</auth.core.version>
 		<jjwt.version>0.9.1</jjwt.version>
 		<shiro.version>1.7.0</shiro.version>
-		<lombok.version>1.18.16</lombok.version>			
+		<lombok.version>1.18.16</lombok.version>		
+		<common.version>1.0.0</common.version>
+		<auth-core.version>1.0.0</auth-core.version>			
 	</properties>  
   
   
  	<!-- 公共构建 -->
 	<build>
 		<plugins>
-
 			<!-- 编译插件 -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -129,12 +130,20 @@
 				</configuration>
 			</plugin>
 
-			<!-- 解决 web项目pom.xml报错 -->
+			<!-- 要将源码放上去，需要加入这个插件 -->
 			<plugin>
-				<artifactId>maven-war-plugin</artifactId>
+				<artifactId>maven-source-plugin</artifactId>
 				<configuration>
-					<version>${maven.plugin.war.version}</version>
+					<attach>true</attach>
 				</configuration>
+				<executions>
+					<execution>
+						<phase>compile</phase>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 
 		</plugins>
@@ -142,6 +151,12 @@
 	
 	<dependencyManagement>
 		<dependencies>
+		
+		<dependency>
+			<groupId>com.hua</groupId>
+			<artifactId>common</artifactId>
+			<version>${common.version}</version>
+		</dependency>		
 			<dependency>
 				<groupId>com.hua</groupId>
 				<artifactId>auth-core</artifactId>
